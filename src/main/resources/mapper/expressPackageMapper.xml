@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tws.repository.ExpressPackageMapper">
+    <select id="selectAll" resultType="tws.entity.ExpressPackage">
+        select * from `expressPackage`;
+    </select>
+
+    <insert id="insert" parameterType="tws.entity.ExpressPackage">
+       insert into `expressPackage`(`id`,`status`,`name`,`phone`,`weight`, `date`) values(#{expressPackage.id},#{expressPackage.bookingNumber},#{expressPackage.name},#{expressPackage.phone},#{expressPackage.weight});
+    </insert>
+</mapper>
